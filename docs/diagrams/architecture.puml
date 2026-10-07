@@ -1,0 +1,63 @@
+@startuml SkyCast_Architecture
+' SkyCast - system diagram (layers and components)
+skinparam componentStyle rectangle
+skinparam component {
+  BackgroundColor #EEF3FC
+  BorderColor #2F6FDF
+}
+skinparam package {
+  BorderColor #8A919C
+}
+
+package "UI layer (ui)" {
+  [MainActivity\nTabLayout + ViewPager] as Main
+  [TodayFragment] as Today
+  [ForecastFragment] as Forecast
+  [FavoritesFragment] as Favs
+  [SearchActivity] as Search
+  [SettingsActivity] as Settings
+}
+
+package "Custom view (view)" {
+  [SimpleChartView\nCanvas line + bar charts] as Chart
+}
+
+package "Data layer (data)" {
+  [WeatherRepository\nnetwork first, cache fallback] as Repo
+  [WeatherApiClient\nHttpURLConnection] as ApiClient
+  [ForecastParser\norg.json] as Parser
+  [DatabaseHelper\nSQLiteOpenHelper] as DB
+  [SettingsStore\nSharedPreferences] as Prefs
+}
+
+package "Utilities (util)" {
+  [WeatherCodes\ncode -> text + icon] as Codes
+}
+
+cloud "Open-Meteo API\n(forecast + geocoding, HTTPS)" as API
+database "SQLite\nfavorites, cached_forecasts" as SQL
+
+Main *-- Today
+Main *-- Forecast
+Main *-- Favs
+Main --> Search : startActivityForResult
+Main --> Settings : startActivity
+
+Today --> Chart
+Forecast --> Chart
+Today --> Codes
+Forecast --> Codes
+
+Today --> Repo
+Forecast --> Repo
+Favs --> Repo
+Search --> Repo
+Settings --> Prefs
+Repo --> Prefs
+
+Repo --> ApiClient
+ApiClient --> Parser
+ApiClient --> API
+Repo --> DB
+DB --> SQL
+@enduml

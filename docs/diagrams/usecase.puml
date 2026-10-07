@@ -1,0 +1,53 @@
+@startuml SkyCast_UseCases
+' SkyCast - use-case diagram
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam usecase {
+  BackgroundColor #EEF3FC
+  BorderColor #2F6FDF
+}
+
+actor "App User" as User
+actor "Open-Meteo API" as API <<external system>>
+
+rectangle "SkyCast Android App" {
+  usecase "UC-01\nView current weather" as UC1
+  usecase "UC-02\nView 7-day forecast\n& charts" as UC2
+  usecase "UC-03\nSearch for a city" as UC3
+  usecase "UC-04\nManage favorites" as UC4
+  usecase "UC-05\nChange units" as UC5
+  usecase "UC-06\nRefresh weather" as UC6
+  usecase "UC-07\nView offline data" as UC7
+
+  usecase "Save / unsave\nfavorite" as UC4a
+  usecase "Delete favorite" as UC4b
+  usecase "Load city\nfrom favorites" as UC4c
+  usecase "Fetch forecast" as FETCH
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+
+UC4 <|-- UC4a
+UC4 <|-- UC4b
+UC4 <|-- UC4c
+
+UC1 ..> FETCH : <<include>>
+UC2 ..> FETCH : <<include>>
+UC6 ..> FETCH : <<include>>
+UC4c ..> UC1 : <<include>>
+UC7 ..> FETCH : <<extend>>\n(network fails)
+
+FETCH --> API
+UC3 --> API
+
+note right of UC7
+  Shows the last saved forecast
+  with an "Offline - last updated" banner
+end note
+@enduml

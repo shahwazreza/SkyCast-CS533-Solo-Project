@@ -1,0 +1,36 @@
+@startuml SkyCast_ScreenFlow
+' SkyCast - screen flow (navigation between activities and fragments)
+hide empty description
+skinparam state {
+  BackgroundColor #EEF3FC
+  BorderColor #2F6FDF
+  FontStyle bold
+}
+
+[*] --> MainActivity : launch app\n(loads last city)
+
+state MainActivity {
+  state "TodayFragment" as Today : current weather\n24-hour temperature chart\nSave / Saved toggle\npull to refresh
+  state "ForecastFragment" as Forecast : 7-day high/low chart\nchance-of-rain chart\ndaily list
+  state "FavoritesFragment" as Favorites : saved cities list\ntap to load, delete
+
+  [*] --> Today
+  Today --> Forecast : tap Forecast tab / swipe
+  Forecast --> Today : tap Today tab / swipe
+  Forecast --> Favorites : tap Favorites tab / swipe
+  Favorites --> Forecast : tap Forecast tab / swipe
+  Favorites --> Today : tap a city\n(loads its weather)
+}
+
+state "SearchActivity" as Search : type city name\ngeocoding results list
+state "SettingsActivity" as Settings : °F + mph / °C + km/h
+
+MainActivity --> Search : Search menu item
+Search --> MainActivity : tap a result\n(selected city returned)
+Search --> MainActivity : Back (no change)
+
+MainActivity --> Settings : Settings menu item
+Settings --> MainActivity : Back\n(reload if units changed)
+
+MainActivity --> [*] : Back / exit
+@enduml
