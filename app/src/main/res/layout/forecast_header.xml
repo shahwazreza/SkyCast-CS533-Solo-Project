@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical">
+
+   <TextView
+      android:id="@+id/offlineBanner"
+      style="@style/OfflineBanner"/>
+
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingLeft="@dimen/activity_horizontal_margin"
+      android:paddingRight="@dimen/activity_horizontal_margin"
+      android:paddingBottom="8dp">
+
+      <TextView
+         style="@style/ChartTitle"
+         android:layout_marginTop="@dimen/activity_vertical_margin"
+         android:text="@string/chart_high_low_title"/>
+
+      <com.rezashahwaz.skycast.view.SimpleChartView
+         android:id="@+id/temperatureChart"
+         style="@style/Chart"
+         android:contentDescription="@string/chart_high_low_title"/>
+
+      <TextView
+         style="@style/ChartTitle"
+         android:text="@string/chart_rain_title"/>
+
+      <com.rezashahwaz.skycast.view.SimpleChartView
+         android:id="@+id/rainChart"
+         style="@style/Chart"
+         android:contentDescription="@string/chart_rain_title"/>
+
+      <TextView
+         style="@style/ChartTitle"
+         android:text="@string/daily_list_title"/>
+   </LinearLayout>
+</LinearLayout>

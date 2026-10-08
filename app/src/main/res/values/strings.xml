@@ -1,0 +1,101 @@
+<resources>
+   <string name="app_name">SkyCast</string>
+
+   <!-- tabs and menu -->
+   <string name="tab_today">Today</string>
+   <string name="tab_forecast">Forecast</string>
+   <string name="tab_favorites">Favorites</string>
+   <string name="action_search">Search</string>
+   <string name="action_refresh">Refresh</string>
+   <string name="action_settings">Settings</string>
+
+   <!-- Today tab -->
+   <string name="last_updated">Updated %1$s</string>
+   <string name="offline_banner">Offline, showing data from %1$s</string>
+   <string name="temperature_format">%1$s%2$s</string>
+   <string name="feels_like">Feels like %1$s%2$s</string>
+   <string name="percent_format">%1$d%%</string>
+   <string name="wind_format">%1$s %2$s</string>
+   <string name="label_humidity">Humidity</string>
+   <string name="label_wind">Wind</string>
+   <string name="label_sunrise">Sunrise</string>
+   <string name="label_sunset">Sunset</string>
+   <string name="button_save">\u2606 Save</string>
+   <string name="button_saved">\u2605 Saved</string>
+
+   <!-- charts -->
+   <string name="chart_hourly_title">Next 24 hours</string>
+   <string name="chart_no_data">No data</string>
+   <string name="legend_temperature">Temperature</string>
+   <string name="degree">\u00B0</string>
+   <string name="hourly_chart_description">Temperature chart from %1$s to %2$s</string>
+
+   <!-- Forecast tab -->
+   <string name="chart_high_low_title">7-day high and low</string>
+   <string name="chart_rain_title">Chance of rain</string>
+   <string name="daily_list_title">Daily forecast</string>
+   <string name="legend_high">High</string>
+   <string name="legend_low">Low</string>
+   <string name="legend_rain">Chance of rain</string>
+   <string name="percent">%</string>
+   <string name="today">Today</string>
+   <string name="high_low">%1$s\u00B0 / %2$s\u00B0</string>
+
+   <!-- Favorites tab -->
+   <string name="favorites_empty">No favorite cities yet.\nTap \u2606 Save on the Today tab to add one.</string>
+   <string name="delete_city">Delete %1$s</string>
+   <string name="favorite_removed">%1$s removed from favorites</string>
+   <string name="undo">Undo</string>
+   <string name="button_delete">Delete</string>
+
+   <!-- Search screen -->
+   <string name="title_search">Search cities</string>
+   <string name="hint_city_name">City name</string>
+   <string name="button_search">Search</string>
+   <string name="error_empty_search">Please enter a city name</string>
+   <string name="no_cities_found">No cities found</string>
+   <string name="error_search">Search failed. Please try again.</string>
+
+   <!-- Settings screen -->
+   <string name="title_settings">Settings</string>
+   <string name="label_units">Units</string>
+   <string name="units_imperial">\u00B0F and mph</string>
+   <string name="units_metric">\u00B0C and km/h</string>
+
+   <!-- units -->
+   <string name="unit_fahrenheit">\u00B0F</string>
+   <string name="unit_celsius">\u00B0C</string>
+   <string name="unit_mph">mph</string>
+   <string name="unit_kmh">km/h</string>
+
+   <!-- errors -->
+   <string name="error_offline">No internet connection</string>
+   <string name="error_loading">Couldn\'t load the weather. Please try again.</string>
+
+   <!-- WMO weather code descriptions -->
+   <string name="wmo_clear">Clear sky</string>
+   <string name="wmo_mainly_clear">Mainly clear</string>
+   <string name="wmo_partly_cloudy">Partly cloudy</string>
+   <string name="wmo_overcast">Overcast</string>
+   <string name="wmo_fog">Fog</string>
+   <string name="wmo_rime_fog">Freezing fog</string>
+   <string name="wmo_drizzle_light">Light drizzle</string>
+   <string name="wmo_drizzle">Drizzle</string>
+   <string name="wmo_drizzle_dense">Heavy drizzle</string>
+   <string name="wmo_freezing_drizzle">Freezing drizzle</string>
+   <string name="wmo_rain_light">Light rain</string>
+   <string name="wmo_rain">Rain</string>
+   <string name="wmo_rain_heavy">Heavy rain</string>
+   <string name="wmo_freezing_rain">Freezing rain</string>
+   <string name="wmo_snow_light">Light snow</string>
+   <string name="wmo_snow">Snow</string>
+   <string name="wmo_snow_heavy">Heavy snow</string>
+   <string name="wmo_snow_grains">Snow grains</string>
+   <string name="wmo_showers_light">Light showers</string>
+   <string name="wmo_showers">Rain showers</string>
+   <string name="wmo_showers_violent">Violent showers</string>
+   <string name="wmo_snow_showers">Snow showers</string>
+   <string name="wmo_thunderstorm">Thunderstorm</string>
+   <string name="wmo_thunderstorm_hail">Thunderstorm with hail</string>
+   <string name="wmo_unknown">Unknown</string>
+</resources>

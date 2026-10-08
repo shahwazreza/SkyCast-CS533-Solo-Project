@@ -1,0 +1,22 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+# Android Studio / IDE files (regenerated on open)
+/.idea/
+*.iml
+.vscode/
+
+# Build output, APKs and logs
+*.apk
+*.aab
+*.log
+.externalNativeBuild/
+.cxx/
+
+# OS files
+Thumbs.db

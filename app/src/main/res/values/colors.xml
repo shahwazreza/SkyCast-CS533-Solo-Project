@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <color name="textSecondary">#757575</color>
+    <color name="offlineBanner">#FFE082</color>
+    <color name="offlineBannerText">#5D4037</color>
+    <color name="deleteIcon">#757575</color>
+
+    <!-- chart colors -->
+    <color name="chartTemperature">#FF5722</color>
+    <color name="chartHigh">#E53935</color>
+    <color name="chartLow">#1E88E5</color>
+    <color name="chartRain">#42A5F5</color>
+</resources>
