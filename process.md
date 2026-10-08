@@ -20,9 +20,9 @@ SkyCast follows the Waterfall model with feedback loops. The requirements are fi
 
 - [x] 1. Analysis and requirements — Wed, Oct 7
 - [x] 2. Alternative solutions and design — Wed, Oct 7
-- [ ] 3. Development — Thu, Oct 8 to Fri, Oct 9
-- [ ] 4. Integration and testing — Sat, Oct 10
-- [ ] 5. Implementation on a real device, fixing issues found — Sat, Oct 10
+- [x] 3. Development — Thu, Oct 8 to Fri, Oct 9
+- [x] 4. Integration and testing — Sat, Oct 10
+- [x] 5. Implementation on a real device, fixing issues found — Sat, Oct 10
 - [ ] 6. Evaluation, PowerPoint report and submission — Sun, Oct 11
 
 ## Users and stakeholders
