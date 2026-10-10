@@ -36,10 +36,10 @@ public class SettingsStore {
       preferences.edit().putString(KEY_UNITS, units).apply();
    }
 
-   // returns the last viewed city, or New York on first launch
+   // returns the last viewed city, or Cape Girardeau on first launch
    public City getLastCity() {
       if (!preferences.contains(KEY_CITY_ID))
-         return City.NEW_YORK;
+         return City.CAPE_GIRARDEAU;
 
       return new City(preferences.getLong(KEY_CITY_ID, 0),
          preferences.getString(KEY_CITY_NAME, ""),

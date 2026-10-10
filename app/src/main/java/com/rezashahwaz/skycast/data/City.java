@@ -6,8 +6,8 @@ import java.io.Serializable;
 
 public class City implements Serializable {
    // default city shown on first launch
-   public static final City NEW_YORK = new City(5128581, "New York",
-      "New York", "United States", 40.7143, -74.006);
+   public static final City CAPE_GIRARDEAU = new City(4379966,
+      "Cape Girardeau", "Missouri", "United States", 37.30588, -89.51815);
 
    private final long id; // Open-Meteo geocoding ID, also the database key
    private final String name;

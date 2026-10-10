@@ -23,7 +23,7 @@ SkyCast follows the Waterfall model with feedback loops. The requirements are fi
 - [x] 3. Development — Thu, Oct 8 to Fri, Oct 9
 - [x] 4. Integration and testing — Sat, Oct 10
 - [x] 5. Implementation on a real device, fixing issues found — Sat, Oct 10
-- [ ] 6. Evaluation, PowerPoint report and submission — Sun, Oct 11
+- [x] 6. Evaluation, PowerPoint report and submission — Sun, Oct 11
 
 ## Users and stakeholders
 
@@ -49,7 +49,7 @@ Thirteen requirements make up the core app; FR-14 and FR-15 are stretch goals if
 | FR-07 | Let the user save or unsave the current city as a favorite | Should | Today |
 | FR-08 | List favorite cities; tapping one loads it, a delete button removes it | Should | Favorites |
 | FR-09 | Let the user choose °F + mph or °C + km/h, and remember the choice | Should | Settings |
-| FR-10 | Reopen on the last city viewed (New York on first launch) | Should | All |
+| FR-10 | Reopen on the last city viewed (Cape Girardeau, MO on first launch) | Should | All |
 | FR-11 | Refresh the weather on demand (pull down or Refresh) | Should | Today |
 | FR-12 | When offline, show the last saved forecast with its "last updated" time | Should | Today, Forecast |
 | FR-13 | Show clear messages for no internet, empty search and no cities found | Must | All |
